@@ -1,0 +1,75 @@
+"""
+Configuration and Constants for Pac-Man Lite
+ECE 2103/2104 Data Structures & Algorithms Project
+"""
+
+# Screen & Display Settings
+TILE_SIZE = 28
+MAZE_ROWS = 21
+MAZE_COLS = 21
+
+MAZE_WIDTH = MAZE_COLS * TILE_SIZE    # 21 * 28 = 588
+MAZE_HEIGHT = MAZE_ROWS * TILE_SIZE  # 21 * 28 = 588
+SIDEBAR_WIDTH = 400
+HEADER_HEIGHT = 50
+
+SCREEN_WIDTH = MAZE_WIDTH + SIDEBAR_WIDTH  # 988
+SCREEN_HEIGHT = MAZE_HEIGHT + HEADER_HEIGHT  # 638
+FPS = 60
+
+# Color Palette (RGB)
+COLOR_BG = (10, 10, 20)
+COLOR_MAZE_WALL = (33, 33, 222)
+COLOR_MAZE_WALL_INNER = (20, 20, 120)
+COLOR_MAZE_FLOOR = (15, 15, 30)
+COLOR_PELLET = (255, 200, 150)
+COLOR_POWER_PELLET = (255, 255, 100)
+
+COLOR_PACMAN = (255, 255, 0)
+COLOR_PACMAN_MOUTH = (10, 10, 20)
+
+# Ghost Colors
+COLOR_BLINKY = (255, 60, 60)       # DFS Ghost (Red)
+COLOR_PINKY = (255, 105, 180)     # BFS Ghost (Pink)
+COLOR_INKY = (0, 220, 255)        # A* Ghost (Cyan)
+COLOR_CLYDE = (255, 165, 0)       # Random / Patrol Ghost (Orange)
+COLOR_GHOST_SCARED = (60, 60, 255)
+COLOR_GHOST_FLASH = (240, 240, 255)
+
+# DSA Frontier & Path Visualization Colors (with alpha)
+COLOR_VIS_BFS_FRONTIER = (255, 105, 180, 90)
+COLOR_VIS_BFS_PATH = (255, 105, 180)
+COLOR_VIS_DFS_FRONTIER = (255, 60, 60, 90)
+COLOR_VIS_DFS_PATH = (255, 60, 60)
+COLOR_VIS_ASTAR_FRONTIER = (0, 220, 255, 90)
+COLOR_VIS_ASTAR_PATH = (0, 220, 255)
+
+# UI & HUD Colors
+COLOR_PANEL_BG = (18, 20, 32)
+COLOR_PANEL_BORDER = (45, 52, 75)
+COLOR_TEXT_WHITE = (240, 240, 245)
+COLOR_TEXT_MUTED = (160, 165, 185)
+COLOR_TEXT_HIGHLIGHT = (255, 215, 0)
+COLOR_ACCENT_GREEN = (46, 204, 113)
+COLOR_ACCENT_RED = (231, 76, 60)
+COLOR_ACCENT_BLUE = (52, 152, 219)
+
+# Gameplay Dynamics
+PACMAN_SPEED = 2.8      # Pixels per frame
+GHOST_SPEED_NORMAL = 2.0
+GHOST_SPEED_SCARED = 1.3
+SCARED_TIME = 8.0       # Seconds ghosts stay scared after power pellet
+
+# Scoring
+POINTS_PELLET = 10
+POINTS_POWER_PELLET = 50
+POINTS_GHOST = 200
+
+# Direction Vectors (dx, dy)
+DIRECTIONS = {
+    'UP': (0, -1),
+    'DOWN': (0, 1),
+    'LEFT': (-1, 0),
+    'RIGHT': (1, 0),
+    'NONE': (0, 0)
+}
